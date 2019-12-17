@@ -1,0 +1,129 @@
+include pug.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title !{pageTitle}
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="media.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous")
+    body
+        header
+            nav.container.navbar
+                .navbar__brand
+                    a.logo(href='#')
+                        img(src='https://vuighe.net/assets/img/logo.png' alt='Logo website')
+                .navbar__main
+                    button.btn-toggle
+                        i.btn-toggle__icon
+                        .btn-toggle__menu
+                            .brand
+                                a.logo(href='#')
+                                    img(src="https://vuighe.net/assets/img/logo.png", alt="Logo website")
+                            .btn-toggle__search
+                                input(type="text" name='search-box' placeholder='Tìm kiến anime')
+                                i.icon-search
+                            .btn-toggle__menu-item
+                                +menutoggle(titles)
+                    .menu
+                        +menu(titles)
+                    .search
+                        input(type="text" name='search-box' placeholder='Tìm kiến anime')
+                        i.icon-search
+                button.navbar__right
+                    i.icon-user
+                    .login-form
+                        .top-form
+                            .top-form__welcome Chào Bạn!
+                            .top-form__tab-login Đăng Nhập
+                            .top-form__user-logo
+                                .icon-user
+                        .center-form
+                            label Tên đăng nhập
+                            input(type="text")
+                            i.icon-username
+                            label Mật khẩu
+                            input(type="text")
+                            i.icon-password
+                            .center-form__btn-login Đăng Nhập
+                            br
+                            hr
+                        .bottom-form
+                            .btn-login-social
+                                i.btn-login-social__icon-social.-fb
+                                span.btn-login-social__login-text Đăng nhập với Facebook
+                            .btn-login-social.-social-2
+                                i.btn-login-social__icon-social.-gg
+                                span.btn-login-social__login-text Đăng nhập với Google
+        hr
+        section.container.container-slide
+            #slideshow
+                a.slide-wrapper(href="#")
+                    +slide(slides)
+            each slide in slides
+                .item.item-slide
+                    img(src= slide.img, alt="anime")
+                    .item-slide__bg
+        section.container.container-episode
+            a.tray-title(href="#") Tập Mới Nhất  
+                i.icon-more
+            .episode-content
+                +chapterNew(episodes)
+        section.container.container-news
+            a.tray-title(href="#") Tin Tức Anime   
+                i.icon-more
+            .news-content
+                .news-left
+                    .news-item-left
+                        a.item(href="#")
+                            img(src="image/new-left-1.jpg", alt="anime news")
+                            .news-item-left__bg
+                        .item.news-item-left-content
+                            .__genre.-genre-0 TIN TỨC ANIME
+                            a.news-item-left-content__title Runway de Waratte - Hành trình của ước mơ
+                            span.news-item-left-content__views 7 giờ trước - 1,486 lượt xem
+                            .news-item-left-content__desc Trang web chính thức cho bộ anime truyền hình Runway de Waratte (Smile Down the Runway) được dựa trên manga cùng tên của tác giả Kotoba Inoya đã chính thức công bố promo video mới, nhân vật mới và một số nhân lực mới. Video đã giới thiệu nhân vật mới có tên là Toh Ayano do diễn viên Ryohei Kimura vào vai.
+                    .news-item-left
+                        a.item(href="#")
+                            img(src="image/new-left-2.jpg", alt="anime news")
+                            .news-item-left__bg
+                        .item.news-item-left-content
+                            .news-item-left-content__genre.-genre-1 ĐỀ CỬ ANIME
+                            a.news-item-left-content__title Top 10 anime mùa Thu 2019 tuần 5! - Xưng vương trở lại!
+                            span.news-item-left-content__views 8 giờ trước - 2,312 lượt xem       
+                            .news-item-left-content__desc Vào tuần vừa rồi, ngôi vương của chúng ta đã bị thay đổi khi Sword Art Online: Alicization - War of Underworld đã rớt một hạng để nhường ngôi cho tân binh Fate/Grand Order: Zettai Majuu Sensen Babylonia. Nhưng trong tuần này, Sword Art Online có thể giành lại vị thế của mình hay không?  
+                .news-right
+                    each item in news
+                        .item.news-item-right
+                            .pic
+                                img(src= item.img, alt="anime news right")
+                                .pic__bg
+                            .news-item-right-content
+                                .__genre(class= "-genre-"+item.genreId)= item.genre
+                                .news-item-right-content__title= item.title
+                                span.news-item-right-content__views= item.views= item.views
+        section.container.container-video-new
+            a.tray-title(href="#") Video Mới  
+                i.icon-more
+            .video-content
+                +videoNew(videos)
+        section.container.container-collection
+            a.tray-title(href="#") Bộ Sưu Tập  
+                i.icon-more
+            .collection-content
+                +collect()
+        section.container.container-picked
+            a.tray-title(href="#") Hôm Nay Xem Gì ?  
+                i.icon-more
+            .picked-content
+                +pick(picks)
+        section.container.container-ranking
+            a.tray-title(href="#") Bảng Xếp Hạng   
+                i.icon-more
+            .ranking-content
+                +rank(rank)
+        a#scroll-to-top(href="#")
+            i.icon-scroll
+

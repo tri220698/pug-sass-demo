@@ -1,0 +1,88 @@
+- var pageTitle = 'Example PUG & SASS';
+- var index = 1;
+- var titles = ['Anime','Movie','Tin Tức','Video','BXH'];
+- var slides = [{img : 'image/a1.jpg', views : '1.127.987 lượt xem',title : 'Thất Đại Tội'}, {img : 'image/a2.jpg', views : '527.187 lượt xem',title : 'Toàn Chức Cao Thủ'}, {img : 'image/a3.jpg', views : '127.987 lượt xem',title : 'Anh Hùng Kỹ Tính'}, {img : 'image/a4.jpg', views : '2.527.187 lượt xem',title : 'Shokugeki No Souma 3'}, {img : 'image/a5.jpg', views : '927.987 lượt xem',title : 'Dr. Stone'}, {img : 'image/a6.jpg', views : '4.576.153 lượt xem',title : 'My Hero Academia'}, {img : 'image/a7.jpg', views : '3.941.987 lượt xem',title : 'Boruto Next Generation'}];
+
+- var episodes = [{img : 'image/chap-new1.jpg', title : 'Vinland Saga', chapter : 'Tập 18 - Ra khỏi cái nôi', views : '100 lượt xem'},{img : 'image/chap-new2.jpg', title : 'Hoshiai No Sora', chapter : 'Tập 6', views : '341 lượt xem'},{img : 'image/chap-new3.jpg', title : 'Doraemon', chapter : 'Tập 577 - Bánh Dorayaki Khổng Lồ & Mật Vụ Điệp Vụ Dora Dora', views : '5,191 lượt xem'},{img : 'image/chap-new4.jpg', title : 'Shining Stars', chapter : 'Tập 42', views : '423 lượt xem'},{img : 'image/chap-new5.jpg', title : 'Sword Art Online: Alicization', chapter : 'Tập 30 - Trận chiến của các Hiệp sĩ', views : '25,748 lượt xem'},{img : 'image/chap-new6.jpg', title : 'Boku no Hero Academia', chapter : 'Tập 68 - Tiến lên, Gutsy Red Riot', views : '37,223 lượt xem'},{img : 'image/chap-new7.jpg', title : 'Vua Hải Tặc', chapter : 'Tập 910 - Vị Samurai huyền thoại Người mà Roger kính ngưỡng!', views : '35,803 lượt xem'},{img : 'image/chap-new8.jpg', title : 'Gegege no Kitarou (2018)', chapter : 'Tập 66 - Shinigami và Ngôi làng bí ẩn của Sakaiminato', views : '588 lượt xem'},{img : 'image/chap-new9.jpg', title : 'Shoujo☆Conte All Starlight', chapter : 'Tập 20', views : '188 lượt xem'},{img : 'image/chap-new10.jpg', title : 'Kono Oto Tomare!', chapter : 'Tập 20 - Một lần nữa', views : '4,398 lượt xem'},{img : 'image/chap-new11.jpg', title : 'Shokugeki no Souma', chapter : 'Tập 67 - Lưỡi dao đơn độc', views : '28,273 lượt xem'},{img : 'image/chap-new12.jpg', title : 'Anata wo Zutto Aishiteru', chapter : 'Full', views : '4,997 lượt xem'}];
+
+- var news = [{img : 'image/new-right-1.jpg', genreId : 3 ,genre : 'REVIEW', title : '"Haikyuu!!" công bố ca khúc mở đầu cho season 4!', views : '3 giờ trước - 450 lượt xem'},{img : 'image/new-right-2.jpg', genreId : 0 , genre : 'TIN TỨC ANIME', title : 'Kakushigoto - Cuộc sống hàng ngày của mangaka sẽ được chuyển thể thành anime!', views : '1 ngày trước - 2,022 lượt xem'},{img : 'image/new-right-3.jpg', genreId : 0 , genre : 'TIN TỨC ANIME', title : 'Crayon Shin-chan movie 2020 - Vương quốc nguệch ngoạc!', views : '1 ngày trước - 1,450 lượt xem'},{img : 'image/new-right-4.jpg', genreId : 4 , genre : 'MANGA', title : 'Tensei Shitara Slime Datta Ken OAD - Cả tempest rủ nhau "đi đu đưa"!', views : '1 ngày trước - 8,368 lượt xem'},{img : 'image/new-right-5.jpg', genreId : 0 , genre : 'TIN TỨC ANIME', title : 'Yatogame-chan Kansatsu Nikki sẽ quay trở lại vào năm 2020!', views : '1 ngày trước - 1,532 lượt xem'},{img : 'image/new-right-6.jpg', genreId : 0 , genre : 'TIN TỨC ANIME', title : 'High Score Girl II - Chuyện tình ở tiệm game!', views : ' 3 ngày trước - 2,210 lượt xem'},{img : 'image/new-right-7.jpg', genreId : 2 , genre : 'TỔNG HỢP', title : 'Live-action Kyochuu Rettou - Phim kinh dị được chuyển thể người đóng! ', views : '4 giờ trước - 1,627 lượt xem'},{img : 'image/new-right-8.jpg', genreId : 1 , genre : 'ĐỀ CỬ ANIME', title : 'Top 10 anime mùa Thu 2019 tuần 5! - Xưng vương trở lại!', views : '5 ngày trước - 2,152 lượt xem'}]
+
+- var videos = [{img : 'image/video-1.jpg', title : 'Meliodas the Demon [Amv] - Nanatsu no Taizai {HD}', time : '03:15'},{img : 'image/video-2.jpg', title : 'Atsushi & Akutagawa Vs Goncharov 「 AMV 」- Bungou Stray Dogs Season 3', time : '03:27'},{img : 'image/video-3.jpg', title : 'Garou The Hero Hunter「AMV」Monster (skillet) - 4K 60FPS', time : '04:15'},{img : 'image/video-4.jpg', title : 'One Piece The Movie STAMPEDE「AMV」- Play Dirty', time : '03:11'},{img : 'image/video-5.jpg', title : 'MiniFood 食べれるミニチュア ポテトサラダ miniature Potato Salad', time : '08:15'},{img : 'image/video-6.jpg', title : 'One Piece Stampede New Trailer {AMV} - Ready or Not?', time : '02:16'},{img : 'image/video-7.jpg', title : 'Garou vs Heroes [FULL FIGHT] - One Punch Man Season 2 AMV', time : '04:32'},{img : 'image/video-8.jpg', title : 'Garou vs Genos & Bang FULL FIGHT「 AMV 」- One Punch Man Season 2', time : '03:07'},{img : 'image/video-9.jpg', title : 'Black Clover「 AMV 」- Trapped in a Nightmare', time : '03:23'},{img : 'image/video-10.jpg', title : 'Dororo (2019) Final Episode「AMV」- Sky Is Falling', time : '03:57'},{img : 'image/video-11.jpg', title : 'Fire Force「 AMV 」- Caught', time : '03:18'},{img : 'image/video-12.jpg', title : 'Shingeki no Kyojin Season 3 Part 2「AMV」- A Moon Without the Sun  [HD]', time : '02:47'}]
+                
+- var picks = [{img : 'image/picked-1.jpg', time : '90 Phút', genre : 'Hành Động, Khoa Học Viễn Tưởng', title : 'Dragon Age: Blood Mage no Seisen', views : '32,478 lượt xem', likes : '30 thích'},{img : 'image/picked-2.jpg', time : '111 Phút', genre : 'Trường Học', title : 'Mimi o Sumaseba', views : '9,478 lượt xem', likes : '37 thích'},{img : 'image/picked-3.jpg', time : '12 / 12 Tập', genre : 'Hành Động, Khoa Học Viễn Tưởng', title : 'Shuumatsu Nani Shitemasu ka? Isogashii desu ka? Sukutte Moratte Ii desu ka?', views : '276,478 lượt xem', likes : '1256 thích'},{img : 'image/picked-4.jpg', time : '26 / 26 Tập', genre : 'Hành Động, Robot', title : 'Kuromukuro', views : '157,478 lượt xem', likes : '128 thích'},{img : 'image/picked-5.jpg', time : '8 / ??? Tập', genre : 'Hành Động, Kinh Dị, Hài Hước', title : 'Senkou no Night Raid', views : '9,285 lượt xem', likes : '6 thích'},{img : 'image/picked-6.jpg', time : '11 / 11 Tập', genre : 'Trinh Thám, Đời Thường', title : 'Subete ga F ni Naru The Perfect Insider', views : '21,478 lượt xem', likes : '1276 thích'},{img : 'image/picked-7.jpg', time : '98 Phút', genre : 'Phiêu Lưu, Kịch Tính', title : 'Mirai no Mirai', views : '12,478 lượt xem', likes : '302 thích'},{img : 'image/picked-8.jpg', time : '3 / 3 Tập', genre : 'Khoa Học Viễn Tưởng', title : '.hack//Quantum', views : '28,175 lượt xem', likes : '30 thích'},{img : 'image/picked-9.jpg', time : '12 / 12 Tập', genre : 'Hài Hước, Thể Thao', title : 'Dive!!!', views : '58,478 lượt xem', likes : '320 thích'},{img : 'image/picked-10.jpg', time : '13 / 13 Tập', genre : 'Lãng Mạn, Trường Học, Siêu Nhiên', title : 'Magic-kyun! Renaissance', views : '86,338 lượt xem', likes : '430 thích'},{img : 'image/picked-11.jpg', time : '13 / 13 Tập', genre : 'Lãng Mạn', title : 'Hồng Huyết Phiến', views : '91,478 lượt xem', likes : '90 thích'},{img : 'image/picked-12.jpg', time : '52 / 52 Tập', genre : 'Hành Động', title : 'Tsubasa Resovoir Chronicle', views : '224,128 lượt xem', likes : '1730 thích'}]
+
+- var rank = [{img : 'image/rank-1.jpg', title : 'Boruto: Naruto Next Generations', views : '31,052,784 lượt xem', chap : '132 / 999 tập'}, {img : 'image/rank-2.jpg', title : 'Mairimashita! Iruma-kun', views : '222,998 lượt xem', chap : '7 / 23 tập'},{img : 'image/rank-3.jpg', title : 'One Piece', views : '146,499,563 lượt xem', chap : '817 / 6969 tập'},{img : 'image/rank-4.jpg', title : 'Boku no Hero Academia', views : '6,713,565 lượt xem', chap : '68 / 999 tập'},{img : 'image/rank-5.jpg', title : 'Vinland Saga', views : '389,336 lượt xem', chap : '18 / 24 tập'},{img : 'image/rank-6.jpg', title : 'Nanatsu no Taizai - Thất Đại Tội', views : '12,230,682 lượt xem', chap : '58 / 76 tập'},{img : 'image/rank-7.jpg', title : 'Sword Art Online: Alicization', views : '2,684,895 lượt xem', chap : '30 / ??? tập'},{img : 'image/rank-8.jpg', title : 'Kengan Ashura', views : '687,629 lượt xem', chap : '24 / 24 tập'},{img : 'image/rank-9.jpg', title : 'Dr. Stone', views : '1,535,768 lượt xem', chap : '3 / ??? tập'},{img : 'image/rank-10.jpg', title : 'Naruto Shippuuden', views : '60,394,086 lượt xem', chap : '500 / 500 tập'},{img : 'image/rank-11.jpg', title : 'Thám Tử Lừng Danh Conan', views : '12,696,637 lượt xem', chap : '958 / ??? tập'},{img : 'image/rank-12.jpg', title : 'One Punch Man', views : '8,322,490 lượt xem', chap : '24 / 999 tập'}]
+mixin menutoggle(titles)
+    ul
+        each title, index in titles
+            li
+                i(class='icon-menu'+' -icon-'+index)
+                a(href='#')= title
+
+mixin menu(titles)
+    ul
+        each title in titles
+            li
+                a(href="#")= title
+
+mixin slide(slides)
+    each slide, index in slides
+        .slide
+            img(src= slide.img alt='anime'+index)
+            .slide__bg
+            .play.slide__play
+                i.icon-play
+            .slide__content
+                span.views= slide.views
+                p.title= slide.title
+
+mixin chapterNew(episodes) 
+    each episode in episodes
+        .item.episode-item
+            img(src= episode.img, alt="anime new")
+            .episode-item__bg
+            .play.episode-item__play
+                i.icon-play
+            p.episode-item__title= episode.title
+            p.episode-item__chapter= episode.chapter
+            p.episode-item__views= episode.views
+
+mixin videoNew(videos)
+    each video in videos
+        .item.video-item
+            img(src= video.img, alt= "video anime")
+            .video-item__bg
+            .video-item__title= video.title
+            .video-item__time= video.time
+            .play.video-item__play
+                i.icon-play
+
+mixin collect()
+    while index <= 8
+        .item.collection-item
+            img(src= "image/collection-" +index++ + ".jpg", alt= "anime collection")
+
+mixin pick(picks)
+    each pick in picks
+        .item.picked-item
+            img(src= pick.img, alt="anime picked")
+            .picked-item__bg
+            .play.picked-item__play
+                i.icon-play
+            .picked-item-info
+                .picked-item-info__time= pick.time
+                .picked-item-info__genre= pick.genre
+            p.picked-item__title= pick.title
+            p.picked-item__views= pick.views
+            p.picked-item__likes= pick.likes
+
+mixin rank(rank)
+    each r, index in rank
+        .item.ranking-item
+            .ranking-item-left
+                img(src= r.img, alt="anime ranking")
+                span.ranking-item-left__index= index + 1
+            .ranking-item-right
+                .ranking-item-right__title= r.title
+                .ranking-item-right__views= r.views
+                .ranking-item-right__chap= r.chap
